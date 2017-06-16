@@ -1,5 +1,16 @@
 body {
-  margin: 0;
   background: #f7fafc; }
+
+body, html, #bg {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
 
 /*# sourceMappingURL=p.css.map */
