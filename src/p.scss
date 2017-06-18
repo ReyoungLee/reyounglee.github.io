@@ -13,7 +13,7 @@ body, html, #bg, #content{
 	left: 0;
 	overflow: hidden;
 }
-$blue: rgba(15, 136, 235, 0.8);
+$blue: rgb(15, 136, 235);
 #content{
 	box-sizing: border-box;
 	position: absolute;
@@ -58,7 +58,7 @@ $blue: rgba(15, 136, 235, 0.8);
 					border-width: 32px 18.4px;
 					border-color: transparent transparent transparent $blue;
 					top: 0;
-					right: -36.8px;
+					right: -36px;
 					clip: rect(0 19px 30px 0);
 				}
 			}
