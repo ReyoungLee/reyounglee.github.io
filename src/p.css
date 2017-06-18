@@ -1,7 +1,7 @@
 body {
   background: #f7fafc; }
 
-body, html, #bg {
+body, html, #bg, #content {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -12,5 +12,74 @@ body, html, #bg {
   top: 0;
   left: 0;
   overflow: hidden; }
+
+#content {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 2; }
+  #content section {
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 30px; }
+    #content section > div {
+      height: 100%; }
+    #content section h4 {
+      border-bottom: 2px rgba(15, 136, 235, 0.8) solid;
+      margin: 0;
+      min-width: 128px; }
+      #content section h4 em {
+        position: relative;
+        font-style: normal;
+        background: rgba(15, 136, 235, 0.8);
+        color: #fff;
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+        line-height: 32px;
+        padding-left: 10px; }
+        #content section h4 em::before, #content section h4 em::after {
+          position: absolute;
+          display: block;
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid; }
+        #content section h4 em::before {
+          left: -18.4px;
+          border-width: 16px 9.2px;
+          border-color: transparent rgba(15, 136, 235, 0.8) transparent transparent; }
+        #content section h4 em::after {
+          border-width: 32px 18.4px;
+          border-color: transparent transparent transparent rgba(15, 136, 235, 0.8);
+          top: 0;
+          right: -36.8px;
+          clip: rect(0 19px 30px 0); }
+  #content .a, #content .b {
+    left: 10px; }
+  #content .a, #content .c {
+    top: 10px; }
+  #content .c, #content .d {
+    right: 10px; }
+  #content .b, #content .d {
+    bottom: 10px; }
+  #content .a {
+    width: 35%;
+    height: 40%; }
+  #content .b {
+    width: 35%;
+    height: 60%; }
+  #content .c {
+    width: 65%;
+    height: 60%; }
+  #content .d {
+    width: 65%;
+    height: 40%; }
+
+@media (max-width: 490px) {
+  #content section {
+    position: static;
+    width: 100% !important;
+    height: auto !important; } }
 
 /*# sourceMappingURL=p.css.map */

@@ -1,7 +1,7 @@
 body{
 	background: #f7fafc;
 }
-body, html, #bg{
+body, html, #bg, #content{
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -12,4 +12,99 @@ body, html, #bg{
 	top: 0;
 	left: 0;
 	overflow: hidden;
+}
+$blue: rgba(15, 136, 235, 0.8);
+#content{
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 2;
+	section{
+		display: block;
+		position: absolute;
+		box-sizing: border-box;
+		padding: 30px;
+		>div{
+			// box-shadow: 0 0 1px $blue inset;
+			height: 100%;
+		}
+		h4{
+			border-bottom: 2px $blue solid;
+			margin: 0;
+			min-width: 128px;
+			em{
+				position: relative;
+				font-style: normal;
+				background: $blue;
+				color: #fff;
+				display: inline-block;
+				width: 100px;
+				height: 30px;
+				line-height: 32px;
+				padding-left: 10px;
+				&::before, &::after{
+					position: absolute;
+					display: block;
+					content: '';
+					width: 0;
+					height: 0;
+					border-style: solid;
+				}
+				&::before{
+					left: -18.4px;
+					border-width: 16px 9.2px;
+					border-color: transparent $blue transparent transparent;
+				}
+				&::after{
+					border-width: 32px 18.4px;
+					border-color: transparent transparent transparent $blue;
+					top: 0;
+					right: -36.8px;
+					clip: rect(0 19px 30px 0);
+				}
+			}
+		}
+	}
+	$x: 35%;
+	$y: 65%;
+	$m: 40%;
+	$n: 60%;
+	.a, .b{
+		left: 10px;
+	}
+	.a, .c{
+		top: 10px;
+	}
+	.c, .d{
+		right: 10px;
+	}
+	.b, .d{
+		bottom: 10px;
+	}
+	.a{
+		width: $x;
+		height: $m;
+	}
+	.b{
+		width: $x;
+		height: $n;
+	}
+	.c{
+		width: $y;
+		height: $n;
+	}
+	.d{
+		width: $y;
+		height: $m;
+	}
+}
+
+@media(max-width:490px){
+	
+#content{
+	section{
+		position: static;
+		width: 100%!important;
+		height: auto!important;
+	}
+}
 }
