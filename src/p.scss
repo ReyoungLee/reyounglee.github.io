@@ -7,6 +7,11 @@ body, html, #bg, #content{
 	width: 100%;
 	height: 100%;
 }
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
 #bg{
 	position: absolute;
 	top: 0;
@@ -28,7 +33,7 @@ $blue: #0f88eb;
 		box-sizing: border-box;
 		// padding: 20px;
 		>div{
-			box-shadow: 0 0 1px $blue inset;
+			// box-shadow: 0 0 1px $blue inset;
 			height: 100%;
 		}
 		h4{
@@ -117,6 +122,51 @@ $blue: #0f88eb;
 	}
 }
 
-.chart,.chart>div{ height: 400px; width: 400px; border-radius: 50%; clip: rect(0px,200px,400px,0px); position: absolute; overflow: hidden; transition: all 222ms;}
-#ctbg{height: 400px; width: 400px; border-radius: 50%; box-shadow: 0 0 30px #069; position: absolute; transition: all 0.2s ease-in-out;}
-#ctbg:hover{transform: rotate(30deg); -webkit-transform: rotate(30deg);}
+#bar{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	ul{
+		padding: 30px 0;
+		margin-top: 30px;
+	}
+	.key{
+		text-align: right;
+		line-height: 40px;
+		max-width: 38%;
+		padding-right: 7%;
+		white-space: nowrap;
+		color: #0c63a9;
+		font-weight: bold;
+		img{
+			width: 24px;
+			height: 24px;
+			vertical-align: middle;
+		}
+	}
+	.value{
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		flex: 1;
+		border-left: 2px $blue solid;
+		li{
+			height: 40px;
+			&:nth-child(1){
+				background-color: #007ac6;
+				width: 80%;
+			}
+			&:nth-child(2){
+				background-color: #328ed5;
+				width: 87%;
+			}
+			&:nth-child(3){
+				background-color: #63b9fb;
+				width: 73%;
+			}
+			&:nth-child(4){
+				background-color: #88cafc;
+				width: 90%;
+			}
+		}
+	}
+}

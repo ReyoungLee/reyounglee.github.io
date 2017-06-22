@@ -7,6 +7,11 @@ body, html, #bg, #content {
   width: 100%;
   height: 100%; }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
 #bg {
   position: absolute;
   top: 0;
@@ -25,7 +30,6 @@ body, html, #bg, #content {
     display: block;
     box-sizing: border-box; }
     #content section > div {
-      box-shadow: 0 0 1px #0f88eb inset;
       height: 100%; }
     #content section h4 {
       border-bottom: 2px #0f88eb solid;
@@ -88,25 +92,43 @@ body, html, #bg, #content {
     padding: 10px 20px 20px 20px; }
   #content .b, #content .d {
     margin-top: 20px; } }
-.chart, .chart > div {
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-  clip: rect(0px, 200px, 400px, 0px);
-  position: absolute;
-  overflow: hidden;
-  transition: all 222ms; }
-
-#ctbg {
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-  box-shadow: 0 0 30px #069;
-  position: absolute;
-  transition: all 0.2s ease-in-out; }
-
-#ctbg:hover {
-  transform: rotate(30deg);
-  -webkit-transform: rotate(30deg); }
+#bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex; }
+  #bar ul {
+    padding: 30px 0;
+    margin-top: 30px; }
+  #bar .key {
+    text-align: right;
+    line-height: 40px;
+    max-width: 38%;
+    padding-right: 7%;
+    white-space: nowrap;
+    color: #0c63a9;
+    font-weight: bold; }
+    #bar .key img {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle; }
+  #bar .value {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    border-left: 2px #0f88eb solid; }
+    #bar .value li {
+      height: 40px; }
+      #bar .value li:nth-child(1) {
+        background-color: #007ac6;
+        width: 80%; }
+      #bar .value li:nth-child(2) {
+        background-color: #328ed5;
+        width: 87%; }
+      #bar .value li:nth-child(3) {
+        background-color: #63b9fb;
+        width: 73%; }
+      #bar .value li:nth-child(4) {
+        background-color: #88cafc;
+        width: 90%; }
 
 /*# sourceMappingURL=p.css.map */
