@@ -35,16 +35,22 @@ $blue: #0f88eb;
 			border-bottom: 2px $blue solid;
 			margin: 0;
 			min-width: 128px;
+			img{
+				width: 24px;
+				height: 24px;
+				vertical-align: middle;
+				margin-top: -5px;
+			}
 			em{
+				white-space: nowrap;
 				position: relative;
 				font-style: normal;
 				background: $blue;
 				color: #fff;
 				display: inline-block;
-				width: 100px;
+				width: 110px;
 				height: 30px;
 				line-height: 32px;
-				padding-left: 10px;
 				&::before, &::after{
 					position: absolute;
 					display: block;
@@ -91,23 +97,26 @@ $blue: #0f88eb;
 	}
 }
 
-@media(max-width:490px){
-	
-#content{
-	.left, .right{
-		min-height: auto;
-		width: 100%;
-		float: none;
-	}
-	$p: 20px;
-	.left{
-		padding: $p $p $p/2 $p;
-	}
-	.right{
-		padding: $p/2 $p $p $p;
-	}
-	.b, .d{
-		margin-top: $p;
+@media(max-width:490px){	
+	#content{
+		.left, .right{
+			min-height: auto;
+			width: 100%;
+			float: none;
+		}
+		$p: 20px;
+		.left{
+			padding: $p $p $p/2 $p;
+		}
+		.right{
+			padding: $p/2 $p $p $p;
+		}
+		.b, .d{
+			margin-top: $p;
+		}
 	}
 }
-}
+
+.chart,.chart>div{ height: 400px; width: 400px; border-radius: 50%; clip: rect(0px,200px,400px,0px); position: absolute; overflow: hidden; transition: all 222ms;}
+#ctbg{height: 400px; width: 400px; border-radius: 50%; box-shadow: 0 0 30px #069; position: absolute; transition: all 0.2s ease-in-out;}
+#ctbg:hover{transform: rotate(30deg); -webkit-transform: rotate(30deg);}
