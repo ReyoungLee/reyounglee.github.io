@@ -80,6 +80,10 @@ ul {
     float: right; }
   #content .b, #content .d {
     margin-top: 30px; }
+  #content .d {
+    background: url(../img/sign.svg) right bottom no-repeat;
+    background-size: 20%;
+    padding-bottom: 20%; }
 
 @media (max-width: 490px) {
   #content .left, #content .right {
@@ -91,7 +95,9 @@ ul {
   #content .right {
     padding: 10px 20px 20px 20px; }
   #content .b, #content .d {
-    margin-top: 20px; } }
+    margin-top: 20px; }
+  #content .d {
+    background-size: 40%; } }
 #bar {
   display: -webkit-box;
   display: -webkit-flex;
@@ -103,7 +109,7 @@ ul {
     text-align: right;
     line-height: 40px;
     max-width: 38%;
-    padding-right: 7%;
+    padding-right: 3%;
     white-space: nowrap;
     color: #0c63a9;
     font-weight: bold; }
