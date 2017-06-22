@@ -13,16 +13,20 @@ body, html, #bg, #content{
 	left: 0;
 	overflow: hidden;
 }
-$blue: rgb(15, 136, 235);
+$blue: #0f88eb;
 #content{
 	box-sizing: border-box;
 	position: absolute;
 	z-index: 2;
+	.left, .right, section{
+		transition: .2s ease-out;
+		-webkit-transition: .2s ease-out;
+	}
 	section{
 		width: 100%;
 		display: block;
 		box-sizing: border-box;
-		padding: 20px;
+		// padding: 20px;
 		>div{
 			box-shadow: 0 0 1px $blue inset;
 			height: 100%;
@@ -65,18 +69,25 @@ $blue: rgb(15, 136, 235);
 		}
 	}
 	.left, .right{
+		box-sizing: border-box;
 		min-height: 100%;
 		p{
-			color: #fff;
+			// color: #fff;
 		}
 	}
+	$p: 30px;
 	.left{
 		width: 35%;
+		padding: $p $p/2 $p $p;
 		float: left;
 	}
 	.right{
 		width: 65%;
+		padding: $p $p $p $p/2;
 		float: right;
+	}
+	.b, .d{
+		margin-top: $p;
 	}
 }
 
@@ -88,9 +99,15 @@ $blue: rgb(15, 136, 235);
 		width: 100%;
 		float: none;
 	}
-	section{
-		width: 100%!important;
-		height: auto!important;
+	$p: 20px;
+	.left{
+		padding: $p $p $p/2 $p;
+	}
+	.right{
+		padding: $p/2 $p $p $p;
+	}
+	.b, .d{
+		margin-top: $p;
 	}
 }
 }
