@@ -13,16 +13,20 @@ body, html, #bg, #content{
 	left: 0;
 	overflow: hidden;
 }
-$blue: rgb(15, 136, 235);
+$blue: #0f88eb;
 #content{
 	box-sizing: border-box;
 	position: absolute;
 	z-index: 2;
+	.left, .right, section{
+		transition: .2s ease-out;
+		-webkit-transition: .2s ease-out;
+	}
 	section{
+		width: 100%;
 		display: block;
-		position: absolute;
 		box-sizing: border-box;
-		padding: 30px;
+		// padding: 20px;
 		>div{
 			box-shadow: 0 0 1px $blue inset;
 			height: 100%;
@@ -67,47 +71,46 @@ $blue: rgb(15, 136, 235);
 			color: #fff;
 		}
 	}
-	$x: 35%;
-	$y: 65%;
-	$m: 40%;
-	$n: 60%;
-	.a, .b{
-		left: 10px;
+	.left, .right{
+		box-sizing: border-box;
+		min-height: 100%;
+		p{
+			// color: #fff;
+		}
 	}
-	.a, .c{
-		top: 10px;
+	$p: 30px;
+	.left{
+		width: 35%;
+		padding: $p $p/2 $p $p;
+		float: left;
 	}
-	.c, .d{
-		right: 10px;
+	.right{
+		width: 65%;
+		padding: $p $p $p $p/2;
+		float: right;
 	}
 	.b, .d{
-		bottom: 10px;
-	}
-	.a{
-		width: $x;
-		height: $m;
-	}
-	.b{
-		width: $x;
-		height: $n;
-	}
-	.c{
-		width: $y;
-		height: $n;
-	}
-	.d{
-		width: $y;
-		height: $m;
+		margin-top: $p;
 	}
 }
 
 @media(max-width:490px){
 	
 #content{
-	section{
-		position: static;
-		width: 100%!important;
-		height: auto!important;
+	.left, .right{
+		min-height: auto;
+		width: 100%;
+		float: none;
+	}
+	$p: 20px;
+	.left{
+		padding: $p $p $p/2 $p;
+	}
+	.right{
+		padding: $p/2 $p $p $p;
+	}
+	.b, .d{
+		margin-top: $p;
 	}
 }
 }
