@@ -1,0 +1,26 @@
+@mixin flexbox(){
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+@mixin flex(){
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+
+body, html, #bg, h3{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+#bg{
+	overflow: hidden;
+}
+h3{
+	text-align: center;
+	position: absolute;
+	line-height: 100vh;
+	font-size: 20px;
+}
