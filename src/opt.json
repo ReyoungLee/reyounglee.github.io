@@ -8,23 +8,23 @@
 			}
 		},
 		"color": {
-			"value": "#ddd"
+			"value": "#fff"
 		},
 		"shape": {
-			"type": "circle"
+			"type": "star"
 		},
 		"opacity": {
-			"value": 0.5,
+			"value": 0.3,
 			"random": false,
 			"anim": {
 				"enable": false,
 				"speed": 0.1,
-				"opacity_min": 0.3,
+				"opacity_min": 1,
 				"sync": false
 			}
 		},
 		"size": {
-			"value": 10,
+			"value": 7,
 			"random": true,
 			"anim": {
 				"enable": false,
