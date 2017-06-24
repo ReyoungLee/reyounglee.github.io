@@ -1,9 +1,10 @@
 
 (function () {
 
-	particlesJS.load('bg', 'src/opt.json', function() {
-		console.log('callback - particles.js config loaded');
-	});
+	var go = function () {
+		particlesJS.load('bg', 'src/opt.json');
+	};
+	go();
+	setInterval(go, 2000);
 
-	
 })();
